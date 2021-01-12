@@ -1,4 +1,4 @@
-ID;Object (Paper);Super Category
+id;name;supercategory
 1;person;person
 2;bicycle;vehicle
 3;car;vehicle
