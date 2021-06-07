@@ -10,6 +10,12 @@ Creates a folder to store all the files, creates the virtual environment e activ
 
 No argument is required to be passed.
 
+```bash
+bash initialize.sh
+```
+
+
+
 ## [training.sh](https://github.com/MarcoSaponara/Conditional_Text_Generation_Project/blob/main/48%20layer%20model/training.sh) (or [training36.sh](https://github.com/MarcoSaponara/Conditional_Text_Generation_Project/blob/main/36%20layer%20model/training36.sh))
 Takes a *txt* dataset, creates the Tensorflow record file and performs the training on it.
 
@@ -24,6 +30,10 @@ The second argument is the control code to which the dataset refers to.
 The third argument is the number of iterations (epochs).
 
 The fourth argument (optional) is the learning rate of the optimizer (it is set to 1e-2 by default).
+
+```bash
+bash training.sh dataset.txt ControlCode 5
+```
 
 ## [generation.sh](https://github.com/MarcoSaponara/Conditional_Text_Generation_Project/blob/main/48%20layer%20model/generation.sh) (or [generation36.sh](https://github.com/MarcoSaponara/Conditional_Text_Generation_Project/blob/main/36%20layer%20model/generation36.sh))
 Starting from a checkpoint, it runs the generation step.
@@ -46,12 +56,22 @@ The sixth argument is the prompt list, a *txt* file with one prompt per line.
 
 The seventh argument (optional) is the output *txt* file (it is set to '*output.txt*' by default).
 
+```bash
+bash generation.sh 0.4 10 25 2 prompts.txt
+```
+
+
+
 ## [evaluation.py](https://github.com/MarcoSaponara/Conditional_Text_Generation_Project/blob/main/evaluation/evaluation.py)
 
-Evaluates a given dataset according to the chosen metrics. It is placed in the folder '[evaluation](https://github.com/MarcoSaponara/Conditional_Text_Generation_Project/tree/main/evaluation)'.
+Evaluates a given dataset according to the chosen metrics. It is placed in the [evaluation](https://github.com/MarcoSaponara/Conditional_Text_Generation_Project/tree/main/evaluation) folder.
 
 It requires 2 arguments.
 
 The first argument is the path to the reference dataset.
 
 The second argument is the path to the dataset to be evaluated.
+
+```bash
+python evaluation.py sample_dataset.txt generated_dataset.txt
+```
