@@ -2,6 +2,8 @@
 
 The work mainly relies on the usage of three bash scripts and one python script, whose function will be briefly explained below. There are two version for each bash script: one for the 48 layer model and one for the 36 layer model (which is specified by the '36' in its name), contained in the corresponding folders.
 
+Note: the two py files [training.py](https://github.com/MarcoSaponara/Conditional_Text_Generation_Project/blob/main/training.py) and [generation.py](https://github.com/MarcoSaponara/Conditional_Text_Generation_Project/blob/main/generation.py) are modified versions of the scripts in the [original repository](https://github.com/salesforce/ctrl) by *Salesforce* and are meant to be substituted with them before running the corresponding bash script. 
+
 ## [initialize.sh](https://github.com/MarcoSaponara/Conditional_Text_Generation_Project/blob/main/48%20layer%20model/initialize.sh) (or [initialize36.sh](https://github.com/MarcoSaponara/Conditional_Text_Generation_Project/blob/main/36%20layer%20model/initialize36.sh))
 
 Creates a folder to store all the files, creates the virtual environment e activates it, installs all the packages required by the model.
